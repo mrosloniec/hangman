@@ -1,0 +1,300 @@
+#container {
+	width: 700px;
+	margin: 0 auto;
+	position: relative;
+}
+
+#buttons {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	padding: 5px;
+	border: 1px solid #000;
+}
+
+#box {
+	width: 300px;
+	height: 300px;
+	border: 1px solid #000;
+	position: relative;
+	margin: 0 auto;
+}
+
+#box .absolute {
+	position: absolute;
+}
+
+#box .black-bg {
+	background: #000;
+}
+
+#box > #hangman {
+	position: absolute;
+	top: 30px;
+	right: 60px;
+	height: 195px;
+	width: 100px;
+}
+
+#box #gallows-bot {
+	bottom: 0;
+	left: 40px;
+	width: 20px;
+	height: 280px;
+}
+
+#box #gallows-top {
+	top: 20px;
+	left: 20px;
+	width: 200px;
+	height: 20px;
+}
+
+#box #rope {
+	height: 50px;
+	right: 45px;
+	top: 0;
+	width: 5px;
+}
+
+#box #hangman-head {
+	top: 50px;
+	right: 22px;
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+}
+
+#box #hangman-left-hand {
+	top: 90px;
+	right: 60px;
+	height: 50px;
+	width: 7px;
+	transform:rotate(45deg);
+}
+
+#box #hangman-right-hand {
+	top: 90px;
+	right: 30px;
+	height: 50px;
+	width: 7px;
+	transform:rotate(-45deg);
+}
+
+#box #hangman-body {
+	top: 100px;
+	right: 43px;
+	height: 53px;
+	width: 10px;
+}
+
+#box #hangman-left-leg {
+	top: 140px;
+	right: 60px;
+	height: 50px;
+	width: 7px;
+	transform:rotate(45deg);
+}
+
+#box #hangman-right-leg {
+	top: 140px;
+	right: 30px;
+	height: 50px;
+	width: 7px;
+	transform:rotate(-45deg);
+}
+
+#box > #hangman.on {
+	transform-origin: top center;
+	animation: hang 10s;
+}
+
+#word {
+	text-align: center;
+	margin: 15px auto 0 auto;
+	font-size: 18px;
+}
+
+#word > input[type=text] {
+	border: 0 none;
+	width: 20px;
+}
+
+#alphabet {
+	margin: 15px auto 0 auto;
+	width: 500px;
+	font-size: 35px;
+	text-align: center;
+}
+
+#alphabet > div {
+	height: 45px;
+	width: 70px;
+	float: left;
+}
+
+#alphabet > div.letter {
+	cursor: pointer;
+}
+
+#yupi {
+	font-size: 30px;
+	background: #ff1493;
+	border-radius: 50%;
+	color: #FFF;
+	display: none;
+	height: 150px;
+	line-height: 150px;
+	left: 270px;
+	position: absolute;
+	text-align: center;
+	top: 70px;
+	width: 150px;
+}
+
+#yupi.on {
+	animation: yupi 1s infinite;
+}
+
+#management {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 25px;
+	background: #fff;
+	display: none;
+}
+
+#management > div.close {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	cursor: pointer;
+	width: 15px;
+	height: 20px;
+	color: #000;
+}
+
+#management-table > table {
+	width: 100%;
+}
+
+#management-table > table tr, td, th {
+	border: 1px solid #000;
+}
+
+@keyframes hang {
+	0% {
+		transform: rotate(0);
+	}
+	25% {
+		transform: rotate(15deg);
+	}
+	50% {
+		transform: rotate(-12deg);
+	}
+	75% {
+		transform: rotate(9deg);
+	}
+	90% {
+		transform: rotate(-3deg);
+	}
+	92% {
+		transform: rotate(3deg);
+	}
+	94% {
+		transform: rotate(-2deg);
+	}
+	96% {
+		transform: rotate(2deg);
+	}
+	98% {
+		transform: rotate(-1deg);
+	}
+	100% {
+		transform: rotate(0);
+	}
+}
+
+@-webkit-keyframes hang {
+	0% {
+		transform: rotate(0);
+	}
+	25% {
+		transform: rotate(15deg);
+	}
+	50% {
+		transform: rotate(-12deg);
+	}
+	75% {
+		transform: rotate(9deg);
+	}
+	90% {
+		transform: rotate(-3deg);
+	}
+	92% {
+		transform: rotate(3deg);
+	}
+	94% {
+		transform: rotate(-2deg);
+	}
+	96% {
+		transform: rotate(2deg);
+	}
+	98% {
+		transform: rotate(-1deg);
+	}
+	100% {
+		transform: rotate(0);
+	}
+}
+
+@keyframes yupi {
+	0% {
+		top: 0;
+		left: 270px;
+		height: 150px;
+		line-height: 150px;
+		font-size: 30px;
+	}
+	50% {
+		top: 250px;
+		left: 270px;
+		height: 60px;
+		line-height: 60px;
+		font-size: 20px;
+	}
+	100% {
+		top: 0;
+		left: 270px;
+		height: 150px;
+		line-height: 150px;
+		font-size: 30px;
+	}
+}
+
+@-webkit-keyframes yupi {
+	0% {
+		top: 0;
+		left: 270px;
+		height: 150px;
+		line-height: 150px;
+		font-size: 30px;
+	}
+	50% {
+		top: 250px;
+		left: 270px;
+		height: 60px;
+		line-height: 60px;
+		font-size: 20px;
+	}
+	100% {
+		top: 0;
+		left: 270px;
+		height: 150px;
+		line-height: 150px;
+		font-size: 30px;
+	}
+}
